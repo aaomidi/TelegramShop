@@ -57,6 +57,12 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>xyz.nickr.telegram</groupId>
+            <artifactId>telepad</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
