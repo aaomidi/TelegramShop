@@ -5,6 +5,7 @@ class Shop {
 
     this.shopName = "Shop";
     this.shopItems = [];
+    this.shopUsers = [];
   }
 
   setCurrencySymbol(currencySymbol) {
@@ -41,6 +42,18 @@ class Shop {
 
   getShopItems() {
     return this.shopItems.slice(0);
+  }
+
+  addShopUser(shopUser) {
+    this.shopUsers.push(shopUser);
+  }
+
+  removeShopUser(shopUser) {
+    this.shopUsers.splice(this.shopUsers.indexOf(shopUser), 1);
+  }
+
+  getShopUsers() {
+    return this.shopUsers.slice(0);
   }
 }
 

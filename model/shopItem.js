@@ -43,3 +43,5 @@ class ShopItem {
     this.cost = cost;
   }
 }
+
+module.exports = {ShopItem};
