@@ -1,0 +1,23 @@
+{
+  "name": "telegram-shop",
+  "version": "1.0.0",
+  "description": "A Telegram shop bot.",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.27.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaomidi/TelegramShop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaomidi/TelegramShop/issues"
+  },
+  "homepage": "https://github.com/aaomidi/TelegramShop#readme"
+}
