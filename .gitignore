@@ -1,4 +1,5 @@
 .idea/
+TelegramShop.iml
 
 node_modules/
 npm-debug*.log

@@ -1,7 +1,7 @@
 class Shop {
   constructor() {
     this.currencySymbol = "$";
-    this.currencyName = "dollar";
+      this.currencyName = "USD";
 
     this.shopName = "Shop";
     this.shopItems = [];
