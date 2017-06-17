@@ -1,8 +1,9 @@
 package com.aaomidi.telegramshop.bean.shop;
 
 import com.aaomidi.telegramshop.TelegramShop;
-import com.aaomidi.telegramshop.bean.ShopUser;
-import lombok.*;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -21,7 +22,7 @@ public class Shop {
     private String currencySymbol = "$";
     private String name;
     private List<Stock> stockList = Collections.synchronizedList(new ArrayList<>());
-    private Map<ShopUser, Integer> balances = new ConcurrentHashMap<>();
+    private Map<Long, Integer> balances = new ConcurrentHashMap<>();
 
 
 }
