@@ -25,13 +25,21 @@ public class TelegramShop implements Listener {
     private final FileStorage storage;
 
     public TelegramShop(String... args) {
+        String key;
+        if (args.length == 0) {
+            key = System.getenv("TELEGRAM_KEY");
+        } else {
+            key = args[0];
+        }
+        System.out.println("key: " + key);
+
         ShopStorage.setInstance(this);
         UserStorage.setInstance(this);
 
         storage = new FileStorage(this);
         storage.readFiles();
 
-        telepadBot = new TelepadBot(args[0]);
+        telepadBot = new TelepadBot(key);
         telegramBot = telepadBot.getHandle();
         telepadBot.start(false);
 
