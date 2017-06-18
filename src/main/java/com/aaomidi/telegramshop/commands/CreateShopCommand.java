@@ -36,7 +36,7 @@ public class CreateShopCommand extends Command {
             return;
         }
 
-        Shop shop = new Shop(instance, user.getUserID());
+        Shop shop = new Shop(user.getUserID(), instance);
         shop.setName(name);
         shop.setCurrencyName(currencyName);
         shop.setCurrencySymbol(currencySymbol);

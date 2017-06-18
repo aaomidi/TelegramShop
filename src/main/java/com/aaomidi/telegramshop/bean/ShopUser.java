@@ -6,7 +6,6 @@ import com.aaomidi.telegramshop.bean.shop.PurchasedItem;
 import com.aaomidi.telegramshop.bean.shop.Shop;
 import com.aaomidi.telegramshop.bean.shop.ShopItem;
 import com.aaomidi.telegramshop.storage.ShopStorage;
-import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import pro.zackpollard.telegrambot.api.chat.message.send.SendableTextMessage;
@@ -25,7 +24,6 @@ public class ShopUser {
         df.setTimeZone(tz);
     }
 
-    @Getter
     private final long userID;
     private final List<UUID> ownedShops = Collections.synchronizedList(new ArrayList<>());
     private final List<UUID> joinedShops = Collections.synchronizedList(new ArrayList<>());
@@ -38,6 +36,10 @@ public class ShopUser {
     public ShopUser(TelegramShop instance, long userID) {
         this.instance = instance;
         this.userID = userID;
+    }
+
+    public long getUserID() {
+        return userID;
     }
 
     public SendableTextMessage getShopsList() {
