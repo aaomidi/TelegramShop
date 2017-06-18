@@ -2,8 +2,10 @@ package com.aaomidi.telegramshop.storage;
 
 import com.aaomidi.telegramshop.TelegramShop;
 import com.aaomidi.telegramshop.bean.shop.Shop;
+import com.aaomidi.telegramshop.storage.files.ShopFile;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,6 +20,12 @@ public class ShopStorage {
     }
 
     public static void storeShop(Shop shop) {
+        shop.setInstance(instance);
         shops.put(shop.getUuid(), shop);
+    }
+
+
+    public static ShopFile genFile() {
+        return new ShopFile(new ArrayList<>(shops.values()));
     }
 }

@@ -1,5 +1,6 @@
 package com.aaomidi.telegramshop.bean.shop;
 
+import com.aaomidi.telegramshop.storage.ShopStorage;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -24,5 +25,9 @@ public class ShopItem {
     public static boolean verifyItemName(String shopName) {
         Matcher matcher = SHOP_NAME_VERIFIER.matcher(shopName);
         return matcher.matches();
+    }
+
+    public Shop getShop() {
+        return ShopStorage.getShop(shopID);
     }
 }

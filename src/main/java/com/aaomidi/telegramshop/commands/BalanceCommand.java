@@ -23,6 +23,7 @@ public class BalanceCommand extends Command {
         if (user.getSelectedShop() == null) {
             return;
         }
+        message.getChat().sendMessage("Your balance is: " + user.getSelectedShop().getCurrencySymbol() + user.getCurrentBalance());
 
     }
 }
