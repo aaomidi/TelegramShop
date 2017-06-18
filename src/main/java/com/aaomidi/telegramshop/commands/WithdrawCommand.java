@@ -50,7 +50,7 @@ public class WithdrawCommand extends Command {
         }
 
         otherUser.unsafeWithdraw(amount);
-        message.getChat().sendMessage(String.format("Withdrew %s%d %s from %s.", shop.getCurrencySymbol(), amount, shop.getCurrencyName(), instance.getUserCache().getUsername(otherUser.getUserID())));
-        otherUser.sendMessage(String.format("%s of %s withdrew %s%d to you.", user.getUsername(), shop.getName(), shop.getCurrencySymbol(), amount));
+        message.getChat().sendMessage(String.format("Withdrew %s%d %s from %s.", shop.getCurrencySymbol(), amount, shop.getCurrencyName(), otherUser.getUsername()));
+        otherUser.sendMessage(String.format("%s of %s withdrew %s%d from you.", user.getUsername(), shop.getName(), shop.getCurrencySymbol(), amount));
     }
 }
