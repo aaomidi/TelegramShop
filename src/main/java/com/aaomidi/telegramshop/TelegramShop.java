@@ -41,7 +41,7 @@ public class TelegramShop implements Listener {
 
         telepadBot = new TelepadBot(key);
         telegramBot = telepadBot.getHandle();
-        telepadBot.start(false);
+        telepadBot.start(true);
 
         userCache = telepadBot.getUserCache();
         this.registerCommands();

@@ -196,6 +196,8 @@ public class ShopUser {
             long purchaseTime = purchasedItem.getPurchasedTime();
 
             if (now - purchaseTime > duration) {
+                shop.sendMessageToOwner(String.format("%s's purchased item, %s, just ran out.", getUsername(), item.getName()));
+                sendMessage(String.format("Your purchased item, %s, just ran out.", item.getName()));
                 iterator.remove();
             }
         }
